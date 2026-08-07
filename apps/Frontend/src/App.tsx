@@ -1,0 +1,27 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Signin from "./pages/Singin";
+import Signup from "./pages/Signup";
+import Trading from "./pages/Trading";
+import AuthCallback from "./pages/AuthCallback";
+import VerifyEmail from "./pages/VerifyEmail";
+import "aos/dist/aos.css";
+import LandingPage from "./pages/Homepage";
+
+function App() {
+  return (
+    <div className="min-h-screen bg-[#0c1418] text-white">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/signin" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/trading" element={<Trading />} />
+          <Route path="/auth/callback" element={<AuthCallback />} />
+          <Route path="/verify" element={<VerifyEmail />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
+}
+
+export default App;
